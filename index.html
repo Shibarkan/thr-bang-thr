@@ -6,6 +6,8 @@
     <title>Bang Bagi THR</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="https://i.pinimg.com/474x/bb/f6/3d/bbf63dbe11dbc25afac9e66717e6109a.jpg" type="image/x-icon" />
+    
     <style>
         body {
             background-image: url('https://i.pinimg.com/474x/af/86/a9/af86a9d3133c58d126547641c89e96ee.jpg');
@@ -24,7 +26,7 @@
         <p class="mt-4 text-gray-700 font-semibold">Udah dapet berapa THR hari ini? Ayo bujuk sodara/teman kalian biar ngasih uang kepada kalian.</p>
         
         <div class="mt-4 w-full overflow-x-auto">
-            <h2 class="font-bold mt-4 text-indigo-600">Riwayat Angpao:</h2>
+            <h2 class="font-bold mt-4 text-indigo-600">Riwayat Thr:</h2>
             <table class="w-full border border-gray-300 mt-2 rounded-lg overflow-hidden">
                 <thead>
                     <tr class="bg-indigo-600 text-white">
@@ -95,7 +97,7 @@
 
         function tambahUang() {
             Swal.fire({
-                title: "Pilih nominal angpao",
+                title: "Pilih nominal duit",
                 input: "select",
                 inputOptions: {
                     "1000": "Rp 1.000",
@@ -116,7 +118,7 @@
                     }
                     if (jumlah === "lainnya") {
                         return Swal.fire({
-                            title: "Masukkan jumlah angpao",
+                            title: "Masukkan jumlah duit",
                             input: "number",
                             inputPlaceholder: "0",
                             showCancelButton: true,
@@ -153,7 +155,7 @@
             updateHistory();
             Swal.fire({
                 title: "Selamat!",
-                html: `<p>Total angpao Anda sekarang: Rp ${formatRupiah(totalUang)}</p>`,
+                html: `<p>Total duit Anda sekarang: Rp ${formatRupiah(totalUang)}</p>`,
                 icon: "success"
             });
         }
